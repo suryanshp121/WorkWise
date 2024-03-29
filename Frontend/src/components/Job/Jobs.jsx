@@ -9,7 +9,7 @@ const Jobs = () => {
   const navigateTo=useNavigate();
   useEffect(()=>{
     try {
-      axios.get("http://localhost:4000/api/v1/job/getall",{withCredentials:true}).then((res)=>{
+      axios.get("https://gentle-cowboy-boots-pig.cyclic.app/api/v1/job/getall",{withCredentials:true}).then((res)=>{
         setJobs(res.data);
       })
     } catch (error) {

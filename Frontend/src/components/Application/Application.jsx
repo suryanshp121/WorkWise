@@ -31,7 +31,7 @@ const Application = () => {
     formData.append("resume",resume);
     formData.append("jobID",id);
     try {
-      const {data}=await axios.post("http://localhost:4000/api/v1/application/post",formData,{withCredentials:true,headers:{
+      const {data}=await axios.post("https://gentle-cowboy-boots-pig.cyclic.app/api/v1/application/post",formData,{withCredentials:true,headers:{
         "Content-Type":"multipart/form-data"
       }});
       setName("");

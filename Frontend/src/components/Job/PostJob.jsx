@@ -31,7 +31,7 @@ const PostJob = () => {
       setSalaryTo("");
       setFixedSalary("");
     }
-    axios.post("http://localhost:4000/api/v1/job/post",fixedSalary.length>=4 ?{title,category,country,city,location,fixedSalary,description}:{title,category,country,city,location,salaryFrom,salaryTo,description},{withCredentials:true,headers:{
+    axios.post("https://gentle-cowboy-boots-pig.cyclic.app/api/v1/job/post",fixedSalary.length>=4 ?{title,category,country,city,location,fixedSalary,description}:{title,category,country,city,location,salaryFrom,salaryTo,description},{withCredentials:true,headers:{
       "Content-Type":"application/json"
     }}).then((res)=>{
       toast.success(res.data.message);
